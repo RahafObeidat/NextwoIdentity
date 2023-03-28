@@ -1,0 +1,47 @@
+﻿@model NextwoIdentity.Models.Product
+
+@{
+    ViewData["Title"] = "CreateProduct";
+}
+
+<h1>CreateProduct</h1>
+
+<h4>Product</h4>
+
+ 
+        <form asp-action="CreateProduct">
+    <table class="table table-bordered">
+        <tr>
+            <td><label asp-for="ProductName"></label></td>
+            <td>
+                <input asp-for="ProductName" class="form-control" placeholder="Enter full Name" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </td>
+
+        </tr>
+        <tr>
+            <td><label asp-for="ProductDescription"></label></td>
+            <td>
+                <input asp-for="ProductDescription" class="form-control" placeholder="Enter Email" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+            </td>
+        </tr>
+     <tr>
+            <td><label asp-for="CategoryId"></label></td>
+            <td>
+            <select asp-for="CategoryId" asp-items="ViewBag.AllCat" class="form-control"> </select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-primary" value="Create" />
+            </td>
+        </tr>
+
+    </table>
+
+    </form>
+       
+
+
